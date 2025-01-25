@@ -8,7 +8,7 @@
 
  /* Optional Custom Styling */
  .navbar {
-    background-color: #6c5ce7; /* Navbar background color */
+    background: linear-gradient(10deg, #FF9933, #128807); /* Tiranga-inspired colors */
   }
   .navbar .nav-link,
   .navbar .navbar-brand {
@@ -40,10 +40,7 @@
     object-fit: cover;
   }
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: #FF9933; /* Blue color */
-  }
+ 
 
   /* Responsive Design for Carousel */
   @media (max-width: 768px) {
@@ -172,63 +169,42 @@
 
 
   /* Achievements Section */
-#unique-achievements-section {
-    background-color: #f8f9fa;
+/* Align image on the left and text on the right */
+.card .row.no-gutters {
+    display: flex;
+    align-items: center;
   }
   
-  #unique-achievements-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #007bff;
-  }
-  
-  #unique-achievements-description {
-    font-size: 1.2rem;
-    color: #6c757d;
-  }
-  
-  #unique-achievements-cards .card {
-    border: none;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #unique-achievements-cards .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #unique-achievements-cards .card-body {
-    background-color: #fff;
-    padding: 20px;
-  }
-  
-  #unique-achievements-cards .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  #unique-achievements-cards .card-text {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  #unique-achievements-cards .card-img-top {
+  .card .card-img-left {
+    width: 100%;
     height: 250px;
     object-fit: cover;
   }
   
-  /* Media Queries for Responsiveness */
-  @media (max-width: 767px) {
-    #unique-achievements-cards .card-img-top {
-      height: 200px; /* Adjust for smaller screens */
+  .card-body {
+    padding-left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .card .row.no-gutters {
+      flex-direction: column;
+    }
+    .card .card-img-left {
+      height: 200px;
+    }
+    .card-body {
+      padding-left: 0;
+      padding-top: 15px;
     }
   }
   
-  @media (max-width: 991px) {
-    #unique-achievements-cards .card-img-top {
-      height: 220px; /* Adjust for medium screens */
-    }
+  /* Example custom styling */
+.carousel-inner {
+    max-width: 100%;
+  }
+  
+  .carousel-item img {
+   
   }
   
 
