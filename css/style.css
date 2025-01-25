@@ -6,35 +6,258 @@
   text-decoration: none;
 }
 
-.navbar {
-  background-color: #fff;
-}
-.navbar .nav-link,
-.navbar .navbar-brand {
-  color: black !important;
-}
-.navbar .nav-link:hover,
-.navbar .dropdown-item:hover {
-  color: red !important;
-}
-.dropdown-menu {
-  background-color: #6c5ce7;
-}
-.dropdown-item {
-  color: white !important;
-}
-
-/* image crousal 
-     */
-
-.carousel-item img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: auto;
-    min-height: 100vh;
+ /* Optional Custom Styling */
+ .navbar {
+    background-color: #6c5ce7; /* Navbar background color */
   }
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    color: white !important; /* White text */
+  }
+  .navbar .nav-link:hover,
+  .navbar .dropdown-item:hover {
+    color: #ffd700 !important; /* Yellow hover effect */
+  }
+  .dropdown-menu {
+    background-color: #6c5ce7; /* Dropdown background */
+  }
+  .dropdown-item {
+    color: white !important;
+  }
+
+  /* Custom Styling for Carousel */
+  .carousel-item img {
+    width: 100%;
+    height: 100vh; /* Adjust height to fill the screen */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+  }
+
+/* <!-- Custom CSS for Notification Section with Scrolling Animation --> */
+
+.carousel-headmaster img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #FF9933; /* Blue color */
+  }
+
+  /* Responsive Design for Carousel */
+  @media (max-width: 768px) {
+    .carousel-item img {
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+    }
+  }
+
+   /* Using Indian Flag Colors */
+   .bg-saffron {
+    background-color: #FF9933; /* Saffron color */
+  }
+
+  .bg-green {
+    background-color: #138808; /* Green color */
+  }
+
+  .text-white {
+    color: #FFFFFF; /* White text */
+  }
+
+  .notification-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .notification {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+    animation-play-state: running; /* Ensure animation is running by default */
+  }
+
+  .notification p {
+    margin-right: 50px;
+    white-space: nowrap;
+  }
+
+  /* Continuous scrolling animation */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Pause the animation on hover */
+  .notification-wrapper:hover .notification {
+    animation-play-state: paused;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .notification-wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .notification p {
+      font-size: 14px; /* Smaller text on mobile */
+    }
+  }
+
+
+  /* headermaster secttion  */
+  .gil-academic-board {
+    background-color: #f8f9fa; /* Light background for the section */
+  }
+
+  /* Scrollable Card Container */
+  .scrolling-cards-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Ensures cards snap into position */
+  }
+
+  .scrolling-cards-container .card {
+    flex: 0 0 auto;
+    width: 250px; /* Card width */
+    scroll-snap-align: start; /* Makes cards snap into view */
+    transition: transform 0.3s ease;
+  }
+
+  .scrolling-cards-container .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    background-color: #FFFFFF;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .scrolling-cards-container {
+      padding: 10px;
+    }
+
+    .scrolling-cards-container .card {
+      width: 45%; /* 2 cards per row on small screens */
+    }
+  }
+
+  /* Auto-scroll Effect */
+  .scrolling-cards-container {
+    animation: scrollCards 15s linear infinite;
+  }
+
+  @keyframes scrollCards {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  /* Achievements Section */
+#unique-achievements-section {
+    background-color: #f8f9fa;
+  }
+  
+  #unique-achievements-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  #unique-achievements-description {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  #unique-achievements-cards .card {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #unique-achievements-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #unique-achievements-cards .card-body {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  #unique-achievements-cards .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  #unique-achievements-cards .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  #unique-achievements-cards .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 767px) {
+    #unique-achievements-cards .card-img-top {
+      height: 200px; /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 991px) {
+    #unique-achievements-cards .card-img-top {
+      height: 220px; /* Adjust for medium screens */
+    }
+  }
+  
+
+  /* footer  */
+
+  /* Updated Background Color */
+.footer {
+    background:#E0E0E0; /* Light Orange */
+    color:black;
+    padding: 40px 0;
+}
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #FF9933;
+}
+.footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: black;
+    transition: color 0.3s;
+}
+.footer .social-icons a:hover {
+    color: #FF9933;
+}
+.footer .location img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
 }
